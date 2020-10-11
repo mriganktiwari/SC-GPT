@@ -138,6 +138,8 @@ def main():
             # score slot error rate
             delexed = reader.delexicalise(gens[i], dact)
             # print("Delexed ::", delexed)
+            # print("a | felements | delexed ::", [a, felements, delexed])
+            # print("scoreERR ::", gentscorer.scoreERR(a,felements, delexed))
             cnt, total, caty = gentscorer.scoreERR(a,felements, delexed)
             # print("gencnts - cnt, total, caty ::", cnt, total, caty)
             gens[i] = reader.lexicalise(gens[i],dact)
@@ -147,7 +149,7 @@ def main():
             gencnts[2]  += caty
         
         # compute gold standard slot error rate
-        # print("Sens ::", sents)
+        # print("Sents ::", sents)
         for sent in sents:
             # score slot error rate
             cnt, total, caty = gentscorer.scoreERR(a,felements,

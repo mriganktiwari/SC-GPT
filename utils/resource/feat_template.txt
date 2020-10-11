@@ -148,6 +148,14 @@ sv.weightrange._2
 sv.weightrange._3
 sv.weightrange.dontcare
 sv.NONE.NONE
+sv.home._1
+sv.away._1
+sv.home_score._1
+sv.away_score._1
+sv.result._1
+sv.subject._1
+sv.venue._1
+sv.news._1
 s.acceptscreditcards
 s.accessories
 s.address

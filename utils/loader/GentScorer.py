@@ -55,6 +55,7 @@ class ERRScorer():
             comparetos = ['sv.'+s+'._1','sv.'+s+'._2','sv.'+s+'._3']
             # count feature count in da feature
             fcnt = 0
+            # print("Feat ::", feat)
             for f in feat:
                 for compareto in comparetos:
                     if compareto==f:  fcnt+=1

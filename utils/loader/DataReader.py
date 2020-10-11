@@ -36,6 +36,7 @@ class DataReader(object):
         
         ## set input feature cardinality
         self._setCardinality()
+        # print("Cardinality ::", self._setCardinality)
        
         ## init formatter/lexicaliser
         self.formatter      = SoftDActFormatter()
@@ -44,11 +45,13 @@ class DataReader(object):
         
         ## for lexicalising SLOT_TYPE
         self.lexicaliser.typetoken = domain
+        # print("returned data ::", self.data['train'])
         
         # initialise dataset
         self._setupData(trainfile,validfile,testfile)
         #self._testDelexicalisation()
-
+        # print("returned data ::", self.data['test'])
+        
         # obtain pos tags
         #self.obtainTags()
         
@@ -69,19 +72,26 @@ class DataReader(object):
             index = 0
 
         # end of data , reset index & return None
+        # print("Len ::", len(self.data[mode]))
         if self.index>=len(self.data[mode]):
             data = None
             self.index = 0
             # shuffle data except for testing 
             if mode!='test' : random.shuffle(self.data[mode])
             return data
-        
+        # print("returned data ::", self.data['test'])
+
         # reading a batch
         start = self.index
         end   = self.index+batch \
                 if self.index+batch<len(self.data[mode])\
                 else len(self.data[mode])
+        # print("start ==", start)
+        # print("end ==", end)
+        # print("Mode ::", mode)
+        # print("SELF DATA ::\n", self.data[mode][start:end])
         data = self.data[mode][start:end]
+        # print("DATA -->", data)
         self.index += batch
 
         # post processing data: a,sv,s,v,sent,dact,base
@@ -164,7 +174,6 @@ class DataReader(object):
         for line in fin.readlines():
             self.cardinality.append(line.replace('\n',''))
             if line.startswith('a.'):
-                # print(line)
                 self.dfs[1]+=1
             elif line.startswith('sv.'):
                 self.dfs[2]+=1
@@ -210,6 +219,7 @@ class DataReader(object):
         # for i in range(5):
             # fin.readline()
         data = json.load(fin)
+        # print("Data ::", data)
         fin.close()
             
         container = []
@@ -219,10 +229,20 @@ class DataReader(object):
             # word tokens
             sent = self.delexicalise( 
                     normalize(re.sub(' [\.\?\!]$','',sent)),dact)
+            # print("Sent ::", sent)
+            # break
             base = self.delexicalise(
                     normalize(re.sub(' [\.\?\!]$','',base)),dact)
+            # print("base ::", base)
+            # break
             feat = self.formatter.format(dact)
+            # print("dact ::", dact)
+            # break
             container.append( [feat,dact,sent,base] )
+            # print("Container ::", container)
+            # break
+        
+        # print("Container ::", container)
         
         # grouping several sentences w/ the same dialogue act
         # for testing set, or DT on train/valid 
@@ -230,12 +250,17 @@ class DataReader(object):
             # grouping data points according to unique DAs
             a2ref = {}
             for feat,dact,sent,base in container:
+                # print(tuple(feat) in a2ref.keys())                
                 if tuple(feat) in a2ref.keys():
+                    # print([[dact],[sent],[base]])
                     a2ref[ tuple(feat)][0].append(dact)
                     a2ref[ tuple(feat)][1].append(sent)
                     a2ref[ tuple(feat)][2].append(base)
+                    # break
                 else:
+                    # print([[dact],[sent],[base]])
                     a2ref[ tuple(feat)] = [[dact],[sent],[base]]
+            # print("A2REF ::", a2ref)
             # return grouped examples
             if group:
                 reordered_container = []
@@ -247,9 +272,11 @@ class DataReader(object):
             if multiref:
                 reordered_container = []
                 for feat,dact,sent,base in container:
+                    # print("Sent ::", a2ref[tuple(feat)][1])
                     reordered_container.append([feat,dact,
                         a2ref[tuple(feat)][1],
                         a2ref[tuple(feat)][2]])
+                    # print("REORDERED CONTAINER ::", reordered_container)
                 return reordered_container
         # if no grouping nor multiref, return directly
         else:   return container
@@ -337,5 +364,7 @@ class DataReader(object):
         words = ['</s>'] + sent.split() + ['</s>']
         wordids = [vocab.index(w) if w in vocab else 0 for w in words]
         return wordids
+
+
 
 
