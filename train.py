@@ -275,7 +275,9 @@ def train(args, train_dataset, model, tokenizer):
         # epoch_iterator = tqdm(train_dataloader, desc="Iteration", disable=args.local_rank not in [-1, 0])
         for step, batch in enumerate(train_dataloader):
             # inputs, labels = mask_tokens(batch, tokenizer, args) if args.mlm else (batch, batch)
-            logger.info(f"  PROGRESS: {float(global_step)/t_total*100}%")
+            if (global_step/t_total*100).is_integer():
+                logger.info(f"  Learning Rate: {float(scheduler.get_lr()[0])}")
+                logger.info(f"  PROGRESS: {float(global_step)/t_total*100}%")
             inputs, masks, labels = batch
             # import pdb
             # pdb.set_trace()
@@ -626,6 +628,24 @@ def main():
 
     return results
 
+# def objective(trial):
+#     params = {
+#         "learning_rate": trial.suggest_loguniform("gradient_accumulation_steps", 1e-5, 1e-3),
+#         "weight_decay": trial.suggest_loguniform("gradient_accumulation_steps", 0, 1),
+#         "adam_epsilon": trial.suggest_loguniform("gradient_accumulation_steps", 1e-9. 1e-7),
+#         "max_grad_norm": trial.suggest_uniform("gradient_accumulation_steps", 0.5, 2),
+#         "num_train_epochs": trial.suggest_init("gradient_accumulation_steps", 5, 50)
+#     }
+#     all_lossed = []
+#     for f in ram
 
 if __name__ == "__main__":
     main()
+
+
+# "gradient_accumulation_steps": trial.suggest_init("gradient_accumulation_steps", ),
+# "learning_rate": trial.suggest_loguniform("gradient_accumulation_steps", 1e-5, 1e-3),
+# "weight_decay": trial.suggest_loguniform("gradient_accumulation_steps", 0, 1),
+# "adam_epsilon": trial.suggest_loguniform("gradient_accumulation_steps", 1e-9. 1e-7),
+# "max_grad_norm": trial.suggest_uniform("gradient_accumulation_steps", 0.5, 2),
+# "num_train_epochs": trial.suggest_init("gradient_accumulation_steps", 5, 50)

@@ -32,15 +32,7 @@
         "powerconsumption"  : "SLOT_POWERCONSUMPTION",
         "resolution" : "SLOT_RESOLUTION",
         "screensize" : "SLOT_SCREENSIZE",
-        "screensizerange" : "SLOT_SCREENSIZERANGE",
-        "subject"	:	"SLOT_SUBJECT",
-        "home"		:	"SLOT_HOME",
-        "home_score"	:	"SLOT_HOMESCORE",
-        "away"		:	"SLOT_AWAY",
-        "away_score"	: 	"SLOT_AWAYSCORE",
-        "venue"	:	"SLOT_VENUE",
-        "news"		:	"SLOT_NEWS",
-        "result"    :   "SLOT_RESULT"
+        "screensizerange" : "SLOT_SCREENSIZERANGE"
     },
     "binary"  : {
         "kidsallowed":["child","kid","kids","children"],
@@ -48,7 +40,6 @@
         "hasinternet":["internet","wifi"],
         "acceptscreditcards":["card","cards"],
         "isforbusinesscomputing":["business","nonbusiness","home","personal","general"],
-        "hasusbport" :["usb"],
-        "result":["win", "draw", "lose"]
+        "hasusbport" :["usb"]
     }
 }

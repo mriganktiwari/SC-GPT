@@ -164,7 +164,6 @@ class DataReader(object):
         for line in fin.readlines():
             self.cardinality.append(line.replace('\n',''))
             if line.startswith('a.'):
-                # print(line)
                 self.dfs[1]+=1
             elif line.startswith('sv.'):
                 self.dfs[2]+=1
@@ -337,5 +336,7 @@ class DataReader(object):
         words = ['</s>'] + sent.split() + ['</s>']
         wordids = [vocab.index(w) if w in vocab else 0 for w in words]
         return wordids
+
+
 
 

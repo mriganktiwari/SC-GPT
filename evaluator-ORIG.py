@@ -36,13 +36,11 @@ def main():
     detectpairs = 'utils/resource/detect.pair'
 
     reader = DataReader(random_seed, domain, 'dt', vocab, train, valid, test, 100 , 0, lexCutoff=4)
-    # print("Reader ::", reader)
     gentscorer = GentScorer(detectpairs)
-    # print("Gentscorer ::", gentscorer)
+
     da2sents = {}
     templates = reader.readall(mode='train')+\
                 reader.readall(mode='valid')
-    # print("da2sents ::", da2sents)
     for a,sv,s,v,sents,dact, base in templates:
         key = (tuple(a),tuple(sv))
         if key in da2sents.keys():
@@ -50,34 +48,22 @@ def main():
             da2sents[key] = list(set(da2sents[key]))
         else:
             da2sents[key] = sents
-    # print("DA2SENTS ::", da2sents)
+
     results_from_gpt = json.load(open(target_file))
-    # print('\n')
-    # print("Results-from-GPT ::", results_from_gpt)
     idx = 0
     parallel_corpus, hdc_corpus = [], []
     gencnts, refcnts = [0.0,0.0,0.0],[0.0,0.0,0.0]
     while True:
         # read data point
         data = reader.read(mode='test',batch=1)
-        # print("DATA -->", data)
         if data==None:
             break
         a,sv,s,v,sents,dact,bases,cutoff_b, cutoff_f = data
-        # print ("\nA ::", a)
-        # print ("\nSV ::", sv)
-        # print ("\nS ::", s)
-        # print ("\nV ::", v)
-        # print ("\nSents ::", sents)
-        # print ("\nDact ::", dact)
-        # print ("\nBases ::", bases)
-        # print ("\nCutoff-B ::", cutoff_b)
-        # print ("\nCutoff-F ::", cutoff_f)
-        # break
+        
         # remove batch dimension
         a,sv,s,v = a[0],sv[0],s[0],v[0]
         sents,dact,bases = sents[0],dact[0],bases[0]
-        # print("Sents ::", sents)
+        
         # score DA similarity between testing example and train+valid set
         template_ranks = []
         for da_t,sents_t in da2sents.items():
@@ -93,7 +79,6 @@ def main():
         score = 1
         
         gen_strs = results_from_gpt[idx]
-        # print("Gen_strs ::", gen_strs)
         gen_strs_single = []
         gen_strs_ = []
         for gen_str in gen_strs:
@@ -111,8 +96,6 @@ def main():
         
 
         gens = gen_strs_
-        # print("GENS ::", gens)
-        # break
         idx += 1
         topk = 1
         felements = [reader.cardinality[x+reader.dfs[1]]\
@@ -125,21 +108,15 @@ def main():
             cnt, total, caty = gentscorer.scoreERR(a,felements, delexed)
             gens[i] = reader.lexicalise(gens[i],dact)
             gens_with_penalty.append((caty, len(gens[i].split()), gens[i]))
-        # print("Gens with penalty ::", gens_with_penalty)
+        
         gens_with_penalty = sorted(gens_with_penalty, key=lambda k:k[0])[:topk]
-        # print("Gens with penalty ::", gens_with_penalty)
-        # print("A ::", a)
-        # print("felements ::", felements)
-        # break
 
         gens = [g[2] for g in gens_with_penalty][:1]
-        # print("Gens ::", gens)
+
         for i in range(len(gens)):
             # score slot error rate
             delexed = reader.delexicalise(gens[i], dact)
-            # print("Delexed ::", delexed)
             cnt, total, caty = gentscorer.scoreERR(a,felements, delexed)
-            # print("gencnts - cnt, total, caty ::", cnt, total, caty)
             gens[i] = reader.lexicalise(gens[i],dact)
             # accumulate slot error cnts
             gencnts[0]  += cnt
@@ -147,17 +124,14 @@ def main():
             gencnts[2]  += caty
         
         # compute gold standard slot error rate
-        # print("Sens ::", sents)
         for sent in sents:
             # score slot error rate
             cnt, total, caty = gentscorer.scoreERR(a,felements,
                     reader.delexicalise(sent,dact))
-            # print("refcnts - cnt, total, caty ::", cnt, total, caty)
             # accumulate slot error cnts
             refcnts[0]  += cnt
             refcnts[1]  += total
             refcnts[2]  += caty
-            
 
         parallel_corpus.append([[g for g in gens], sents])
         hdc_corpus.append([bases[:1],sents])
@@ -166,8 +140,7 @@ def main():
     
     for i in parallel_corpus:
         predicted_sentences.append(i[0][0])
-    print("gencnts ::", gencnts)
-    print("refcnts ::", refcnts)
+
     bleuModel   = gentscorer.scoreSBLEU(parallel_corpus)
     bleuHDC     = gentscorer.scoreSBLEU(hdc_corpus)
     print ('##############################################')

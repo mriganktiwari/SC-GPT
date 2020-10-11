@@ -1,0 +1,152 @@
+[
+  [
+    "match_result @ inform ( home = Sheffield United ; home_score = 1 ; away = West Ham United ; away_score = 0 ; news = VAR denies West Ham point against Sheffield United after goalkeeping woes return )",
+    "VAR denies West Ham United point against Sheffield United after their goalkeeping woes return in a 0-1 loss.",
+    "VAR denies West Ham United point against Sheffield United after their goalkeeping woes return in a 0-1 loss."
+  ],
+  [
+    "match_result @ inform ( home = Liverpool ; home_score = 2 ; away = Sheffield United ; away_score = 0 ; news = Salah and Mane see off Sheffield United to keep Liverpool rolling on )",
+    "Liverpool kept rolling as Mane and Salah helped secure a 2-0 victory against Sheffield.",
+    "Liverpool kept rolling as Mane and Salah helped secure a 2-0 victory against Sheffield."
+  ],
+  [
+    "match_result @ inform ( home = Brighton and Hove Albion ; home_score = 1 ; away = Chelsea ; away_score = 1 ; news = Alireza Jahanbakhsh's overhead stunner for Brighton denies Chelsea )",
+    "Alireza Jahanbakhsh 's overhead stunner for Brighton and Hove Albion denies Chelsea a victory as the match ended in a 1-1 draw.",
+    "Alireza Jahanbakhsh 's overhead stunner for Brighton and Hove Albion denies Chelsea a victory as the match ended in a 1-1 draw."
+  ],
+  [
+    "match_result @ inform ( home = Burnley ; home_score = 1 ; away = Aston Villa ; away_score = 2 ; news = Jack Grealish inspires Villa to victory at Burnley after latest VAR controversy )",
+    "Jack Grealish inspires Aston Villa to a 2-1 victory at Burnley after latest VAR controversy.",
+    "Jack Grealish inspires Aston Villa to a 2-1 victory at Burnley after latest VAR controversy."
+  ],
+  [
+    "match_result @ inform ( home = Newcastle United ; home_score = 0 ; away = Leicester City ; away_score = 3 ; news = Leicester strengthen grip on second as Maddison sparks win over Newcastle )",
+    "Leicester strengthen their grip on second as Maddison sparks a 3-0 win over Newcastle United.",
+    "Leicester strengthen their grip on second as Maddison sparks a 3-0 win over Newcastle United."
+  ],
+  [
+    "match_result @ inform ( home = Southampton ; home_score = 1 ; away = Tottenham Hotspur ; away_score = 0 ; news = Southampton's Danny Ings sinks Tottenham and Harry Kane limps off )",
+    "Southampton 's Danny Ings sinks Tottenham Hotspur to a 1-0 loss and Harry Kane limps off",
+    "Southampton 's Danny Ings sinks Tottenham Hotspur to a 1-0 loss and Harry Kane limps off"
+  ],
+  [
+    "match_result @ inform ( home = Watford ; home_score = 2 ; away = Wolverhampton Wanderers ; away_score = 1 ; news = Deulofeu and Doucoure deliver victory for 10-man Watford over Wolverhampton Wanderers )",
+    "Deulofeu and Doucoure deliver a 2-1 victory for 10-man Watford over Wolverhampton Wanderers.",
+    "Deulofeu and Doucoure deliver a 2-1 victory for 10-man Watford over Wolverhampton Wanderers."
+  ],
+  [
+    "match_result @ inform ( home = Manchester City ; home_score = 2 ; away = Everton ; away_score = 1 ; news = Gabriel Jesus strikes twice to steer Manchester City past Everton )",
+    "Gabriel Jesus strikes twice to steer Manchester City a 2-1 victory over Everton.",
+    "Gabriel Jesus strikes twice to steer Manchester City a 2-1 victory over Everton."
+  ],
+  [
+    "match_result @ inform ( home = Norwich City ; home_score = 1 ; away = Crystal Palace ; away_score = 1 ; news = Wickham salvages point for Crystal Palace as Norwich lose early lead again )",
+    "Wickham salvages point for Crystal Palace with a 1-1 draw against Norwich City who lose early lead again.",
+    "Wickham salvages point for Crystal Palace with a 1-1 draw against Norwich City who lose early lead again."
+  ],
+  [
+    "match_result @ inform ( home = West Ham United ; home_score = 4 ; away = Bournemouth ; away_score = 0 ; news = West Ham put four past Bournemouth to welcome back David Moyes in style )",
+    "West Ham United defeats Bournemouth 4-0 to welcome back David Moyes in style.",
+    "West Ham United defeats Bournemouth 4-0 to welcome back David Moyes in style."
+  ],
+  [
+    "match_result @ inform ( home = Arsenal ; home_score = 2 ; away = Manchester United ; away_score = 0 ; news = Pepe strikes as Arsenal rediscover their mojo to master Manchester United )",
+    "Pepe strikes as Arsenal rediscover their mojo to defeat Manchester United 2-0.",
+    "Pepe strikes as Arsenal rediscover their mojo to defeat Manchester United 2-0."
+  ],
+  [
+    "match_result @ inform ( home = Arsenal ; home_score = 1 ; away = Chelsea ; away_score = 2 ; news = Misery for Arteta after Chelsea's Abraham grabs late winner at Arsenal )",
+    "Misery for Arteta after Chelsea 's Abraham grabs a late 2-1 win at Arsenal",
+    "Misery for Arteta after Chelsea 's Abraham grabs a late 2-1 win at Arsenal"
+  ],
+  [
+    "match_result @ inform ( home = Liverpool ; home_score = 1 ; away = Wolverhampton Wanderers ; away_score = 0 ; news = Sadio Mane sees Liverpool home over Wolverhampton Wanderers with a little help from VAR )",
+    "Sadio Mane sees Liverpool home over Wolverhampton Wanderers and defeated them 1-0 with a little help from VAR.",
+    "Sadio Mane sees Liverpool home over Wolverhampton Wanderers and defeated them 1-0 with a little help from VAR."
+  ],
+  [
+    "match_result @ inform ( home = Manchester City ; home_score = 2 ; away = Sheffield United ; away_score = 0 ; news = Manchester City and Aguero profit from moment of farce to sink Sheffield United )",
+    "Manchester City and Aguero benefit from a moment of farce to win 2-0 over Sheffield United.",
+    "Manchester City and Aguero benefit from a moment of farce to win 2-0 over Sheffield United."
+  ],
+  [
+    "match_result @ inform ( home = Brighton and Hove Albion ; home_score = 2 ; away = Bournemouth ; away_score = 0 ; news = Brighton's Aaron Mooy produces cracker to finish off Bournemouth )",
+    "Brighton 's Aaron Mooy produces a cracker to finish off Bournemouth with a 2-0 win at the Amex stadium.",
+    "Brighton 's Aaron Mooy produces a cracker to finish off Bournemouth with a 2-0 win at the Amex stadium."
+  ],
+  [
+    "match_result @ inform ( home = Newcastle United ; home_score = 1 ; away = Everton ; away_score = 2 ; news = Dominic Calvert-Lewin strikes twice to give Everton win at Newcastle )",
+    "Dominic Calvert-Lewin strikes twice to give Everton a 2-1 win over Newcastle United.",
+    "Dominic Calvert-Lewin strikes twice to give Everton a 2-1 win over Newcastle United."
+  ],
+  [
+    "match_result @ inform ( home = Southampton ; home_score = 1 ; away = Crystal Palace ; away_score = 1 ; news = Southampton's Danny Ings extends his hot streak to peg back Crystal Palace )",
+    "Southampton 's Danny Ings extends his hot streak to peg back Crystal Palace as the match ended in a 1-1 draw.",
+    "Southampton 's Danny Ings extends his hot streak to peg back Crystal Palace as the match ended in a 1-1 draw."
+  ],
+  [
+    "match_result @ inform ( home = Watford ; home_score = 3 ; away = Aston Villa ; away_score = 0 ; news = Troy Deeney double helps resurgent Watford beat Villa with 10 men )",
+    "Troy Deeney 's double helps resurgent Watford beat Aston Villa 3-0 with 10 men.",
+    "Troy Deeney 's double helps resurgent Watford beat Aston Villa 3-0 with 10 men."
+  ],
+  [
+    "match_result @ inform ( home = Norwich City ; home_score = 2 ; away = Tottenham Hotspur ; away_score = 2 ; news = Harry Kane rescues point for Tottenham Hotspur at Norwich after Aurier's farcical own goal )",
+    "Harry Kane rescues a point for Tottenham Hotspur at Norwich City after Aurier 's farcical own goal as the match ended in a 2-2 draw.",
+    "Harry Kane rescues a point for Tottenham Hotspur at Norwich City after Aurier 's farcical own goal as the match ended in a 2-2 draw."
+  ],
+  [
+    "match_result @ inform ( home = West Ham United ; home_score = 1 ; away = Leicester City ; away_score = 2 ; news = Demarai Gray clinches Leicester win at West Ham to seal Pellegrinis sacking )",
+    "Demarai Gray clinches Leicester City a 2-1 win at West Ham united to seal Pellegrinis sacking",
+    "Demarai Gray clinches Leicester City a 2-1 win at West Ham united to seal Pellegrinis sacking"
+  ],
+  [
+    "match_result @ inform ( home = Burnley ; home_score = 0 ; away = Manchester United ; away_score = 2 ; news = Manchester United's deadly Anthony Martial punishes sloppy Burnley )",
+    "Manchester United 's deadly Anthony Martial punishes sloppy Burnley as they won 2-0.",
+    "Manchester United 's deadly Anthony Martial punishes sloppy Burnley as they won 2-0."
+  ],
+  [
+    "match_result @ inform ( home = Wolverhampton Wanderers ; home_score = 3 ; away = Manchester City ; away_score = 2 ; news = Matt Doherty stuns 10-man Manchester City to give Wolverhampton Wanderers thrilling win )",
+    "Matt Doherty stuns 10-man Manchester City to give Wolverhampton Wanderers a thrilling 3-2 win.",
+    "Matt Doherty stuns 10-man Manchester City to give Wolverhampton Wanderers a thrilling 3-2 win."
+  ],
+  [
+    "match_result @ inform ( home = Tottenham Hotspur ; home_score = 2 ; away = Brighton and Hove Albion ; away_score = 1 ; news = Dele Alli's flash of class seals home win for Tottenham over Brighton )",
+    "Dele Alli 's flash of class earns Tottenham Hotspur a 2-1 victory over Brighton and Hove Albion.",
+    "Dele Alli 's flash of class earns Tottenham Hotspur a 2-1 victory over Brighton and Hove Albion."
+  ],
+  [
+    "match_result @ inform ( home = Aston Villa ; home_score = 1 ; away = Norwich City ; away_score = 0 ; news = Conor Hourihane edges Aston Villa past Norwich in drop-zone battle )",
+    "Conor Hourihane edges Aston Villa past Norwich City to win 1-0 in a drop-zone battle.",
+    "Conor Hourihane edges Aston Villa past Norwich City to win 1-0 in a drop-zone battle."
+  ],
+  [
+    "match_result @ inform ( home = Bournemouth ; home_score = 1 ; away = Arsenal ; away_score = 1 ; news = Pierre-Emerick Aubameyang salvages draw for Arsenal at Bournemouth )",
+    "Pierre-Emerick Aubameyang salvages a 1-1 draw for Arsenal at Bournemouth.",
+    "Pierre-Emerick Aubameyang salvages a 1-1 draw for Arsenal at Bournemouth."
+  ],
+  [
+    "match_result @ inform ( home = Chelsea ; home_score = 0 ; away = Southampton ; away_score = 2 ; news = Chelsea stunned after Nathan Redmond wraps up vital win for Southampton )",
+    "Chelsea stunned after Nathan Redmond wraps up a vital 2-0 win for Southampton.",
+    "Chelsea stunned after Nathan Redmond wraps up a vital 2-0 win for Southampton."
+  ],
+  [
+    "match_result @ inform ( home = Crystal Palace ; home_score = 2 ; away = West Ham United ; away_score = 1 ; news = Jordan Ayew's last-minute solo goal sees Crystal Palace sink West Ham )",
+    "Jordan Ayew 's last-minute solo goal sees Crystal Palace sink West Ham United in 2-1 win.",
+    "Jordan Ayew 's last-minute solo goal sees Crystal Palace sink West Ham United in 2-1 win."
+  ],
+  [
+    "match_result @ inform ( home = Everton ; home_score = 1 ; away = Burnley ; away_score = 0 ; news = Carlo Ancelotti gets off the mark as Everton grab late win over Burnley )",
+    "Carlo Ancelotti got off the mark as Everton grab a late 1-0 win over Burnley.",
+    "Carlo Ancelotti got off the mark as Everton grab a late 1-0 win over Burnley."
+  ],
+  [
+    "match_result @ inform ( home = Sheffield United ; home_score = 1 ; away = Watford ; away_score = 1 ; news = Watford off bottom after Ben Foster's heroics thwart Sheffield United )",
+    "Watford off bottom after Ben Foster 's heroics thwart Sheffield United with match ending in a 1-1 draw.",
+    "Watford off bottom after Ben Foster 's heroics thwart Sheffield United with match ending in a 1-1 draw."
+  ],
+  [
+    "match_result @ inform ( home = Manchester United ; home_score = 4 ; away = Newcastle United ; away_score = 1 ; news = Anthony Martial at double for Manchester United in Newcastle rout )",
+    "Anthony Martial at double for Manchester United in Newcastle rout of 4-1 at Old Trafford.",
+    "Anthony Martial at double for Manchester United in Newcastle rout of 4-1 at Old Trafford."
+  ]
+]

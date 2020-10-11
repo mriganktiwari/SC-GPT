@@ -28,7 +28,7 @@ class ERRScorer():
         fin = file(detectfile)
         self.detectPairs = json.load(fin)
         fin.close()
-        
+
     def countSlots(self,dataset,reader):
         count = 0
         for t in dataset:
